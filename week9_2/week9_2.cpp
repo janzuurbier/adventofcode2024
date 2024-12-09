@@ -43,12 +43,10 @@ int main()
 				checksum += pos * i;
 				pos++;
 			}
-			moved[i] = true;
 		}
 		else {
 			pos += blocks[i];
 		}
-
 
 		if (i == spaces.size())
 			break;
