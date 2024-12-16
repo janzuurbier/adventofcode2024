@@ -13,10 +13,6 @@ typedef pair<int, int> point;
 const int WIDTH = 101;
 const int HEIGHT = 103;
 
-
-
-
-
 int main()
 {
 	ifstream input("C:\\Users\\Jan\\Desktop\\input.txt");
@@ -24,11 +20,6 @@ int main()
 		cout << "file not found" << endl;
 		return 1;
 	}
-
-	map<point, int> m;
-	for (int i = 0; i < HEIGHT; i++)
-		for (int j = 0; j < WIDTH; j++)
-			m[point(i, j)] = 0;
 
 	vector<point> pos_vect;
 	vector<point> v_vect;
