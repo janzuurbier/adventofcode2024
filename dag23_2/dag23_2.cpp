@@ -12,24 +12,6 @@ using namespace std;
 map<string, set<string>> m;
 
 
-set<string> overlap(const set<string>& a, const set<string>& b) {
-	set<string> c;
-	for (string s : a)
-		if (b.count(s) > 0)
-			c.insert(s);
-	return c;
-}
-
-set<string> diff(const set<string>& a, const set<string>& b) {
-	set<string> c;
-	for (string s : a)
-		if (b.count(s) == 0)
-			c.insert(s);
-	return c;
-}
-
-
-
 int main()
 {
 	ifstream input("C:\\Users\\Jan\\Desktop\\input.txt");

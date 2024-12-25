@@ -199,6 +199,8 @@ int main()
 		}
 	}
 
+	//print values to see if the adder works correct
+	//(but most of the time it doesn't)
 	uint64_t ix = 0;
 	uint64_t iy = 0;
 	uint64_t iz = 0;
@@ -227,6 +229,8 @@ int main()
 	cout << to_binary_string(iz, 45) << endl;
 	cout << to_binary_string(ix + iy, 45) << endl;
 
+	//print dependencies to figure out where in might go wrong.
+	//so I can write swaps on line 173-175
 	ofstream out("C:\\Users\\Jan\\Desktop\\output.txt");
 	for (int i = 0; i < 10; i++) {
 		print_tree(out, "z0" + to_string(i));
@@ -237,6 +241,8 @@ int main()
 		out << endl;
 	}
 
+	//after it seems to be correct print de outputs in 
+	//alphabetic order. 
 	set<string> final;
 	for (pair<string, string> p : swaps) {
 		final.insert(p.first);
